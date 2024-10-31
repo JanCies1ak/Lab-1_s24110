@@ -33,3 +33,9 @@ jobs:
       # Krok 4: Wyświetl wynik (accuracy)
       - name: Display training result
         run: cat accuracy.txt
+
+      - name: Save training results
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-results
+          path: accuracy.txt
