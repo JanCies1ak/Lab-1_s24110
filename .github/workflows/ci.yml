@@ -14,10 +14,16 @@ jobs:
 
     steps:
       # Krok 1: Checkout repozytorium
+      - name: Checkout
+        run: actions/checkout@v4
 
       # Krok 2: Zainstaluj Python i zależności
+      - name: Install dependencies
+        run: echo imagine that it's installing
 
       # Krok 3: Uruchom trenowanie modelu
+      - name: Run training
+        run: python s24110.py
 
       # Krok 4: Wyświetl wynik (accuracy)
       - name: Display training result
