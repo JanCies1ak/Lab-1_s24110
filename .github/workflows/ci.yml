@@ -1,0 +1,24 @@
+# .github/workflows/ci.yml
+
+name: CI/CD Pipeline for ML Model Training
+
+# Wykonuj akcje przy każdym pushu do gałęzi main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  train-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Krok 1: Checkout repozytorium
+
+      # Krok 2: Zainstaluj Python i zależności
+
+      # Krok 3: Uruchom trenowanie modelu
+
+      # Krok 4: Wyświetl wynik (accuracy)
+      - name: Display training result
+        run: cat accuracy.txt
