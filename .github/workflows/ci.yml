@@ -15,11 +15,16 @@ jobs:
     steps:
       # Krok 1: Checkout repozytorium
       - name: Checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       # Krok 2: Zainstaluj Python i zależności
       - name: Install dependencies
-        run: echo imagine that it's installing
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Check python version
+        run: python -c "import sys; print(sys.version)"
 
       # Krok 3: Uruchom trenowanie modelu
       - name: Run training
